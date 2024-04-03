@@ -1,9 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Volume of a square based pyramid" />
+    <meta name="keywords" content="mths, ics2o" />
+    <meta name="author" content="Pablo Fiallos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.yellow-lime.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <title>Volume of a square based pyramid</title>
   </head>
   <body>
-    <p>Paragraph</p>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Volume of a square based pyramid</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="right-image">
+          <img src="./images/pyramid.png" alt="pyramid" width="250" />
+        </div>
+        <div class="page-content">Please enter the following: </div>
+        <br />
+        <form action="#">
+          <p>l value</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="lValue">
+            <label class="mdl-textfield__label" for="l-entered">enter...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+          <p>w value</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="wValue">
+            <label class="mdl-textfield__label" for="w-entered">enter...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+          <p>h value</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="hValue">
+            <label class="mdl-textfield__label" for="h-entered">enter...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+          <br />
+          <!-- Accent-colored raised button with ripple -->
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            onclick="enterClicked()">
+            Calculate
+          </button>
+        </form>
+        <br />
+        <div class="page-content-answer">
+          <div id="user-info"></div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
